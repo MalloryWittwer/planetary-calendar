@@ -1,0 +1,49 @@
+:root {
+  --bodyBG: rgb(210, 222, 224);
+  --diagram: rgb(246, 251, 252);
+  --diagramHover: rgb(235, 242, 243);
+  --infoWindow: rgb(75, 108, 117);
+  --infoWindowBG: rgb(210, 222, 224);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bodyBG);
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--infoWindowBG);
+}
+
+#phase-diagram {
+  position: relative;
+  top: -25px;
+  height: 644px;
+  width: 800px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#svg-outlines {
+  pointer-events: none;
+}
+
+.areas {
+  fill: var(--diagram);
+}
+
+.areas path:hover {
+  fill: var(--diagramHover);
+}
