@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import PhaseDiagram from "./diagram";
+import Diagram from "./diagram";
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <>
         <div className="main-container">
-          <PhaseDiagram />
+          <Diagram />
         </div>
       </>
     );

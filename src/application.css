@@ -1,9 +1,7 @@
 :root {
-  --bodyBG: rgb(210, 222, 224);
-  --diagram: rgb(246, 251, 252);
-  --diagramHover: rgb(235, 242, 243);
-  --infoWindow: rgb(75, 108, 117);
-  --infoWindowBG: rgb(210, 222, 224);
+  --bodyBG: white;
+  --diagram: rgba(0, 0, 0, 0);
+  --diagramHover: rgb(243, 243, 243);
 }
 
 body {
@@ -15,13 +13,13 @@ body {
 
 .main-container {
   height: 100vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--infoWindowBG);
 }
 
-#phase-diagram {
+#diagram {
   position: relative;
   top: -25px;
   height: 644px;
@@ -36,7 +34,7 @@ svg {
   height: 100%;
 }
 
-#svg-outlines {
+#svg-outlines, #svg-annotations {
   pointer-events: none;
 }
 
@@ -45,5 +43,7 @@ svg {
 }
 
 .areas path:hover {
-  fill: var(--diagramHover);
+  cursor: pointer;
+  stroke: rgb(197, 197, 197);
+  stroke-width: 1px;
 }

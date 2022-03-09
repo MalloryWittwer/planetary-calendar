@@ -9,33 +9,17 @@
    </cc:Work>
   </rdf:RDF>
  </metadata>
- <g>
-  <ellipse cx="100" cy="100" rx="67.067" ry="67.069" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width=".63159"/>
-  <ellipse cx="100" cy="100" rx="99.687" ry="99.69" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width=".532"/>
-  <g>
-   <g stroke="#ccc" stroke-width=".63159">
-    <ellipse cx="100" cy="100" rx="53.414" ry="53.416" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="m99.949 99.548-53.362 0.45242" fill="#e2e2e2" stroke-dasharray="0.631594, 1.26318"/>
-    <ellipse cx="46.587" cy="100" rx="5.8647" ry="5.8649" fill="#f8f8f8" stroke-linecap="round" stroke-linejoin="round"/>
-   </g>
-   <ellipse cx="100" cy="100" rx="9.8965" ry="9.8968" fill="#ffe680" stroke="#fea" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1316"/>
+ <ellipse transform="rotate(14.758)" cx="122.18" cy="71.227" rx="67.067" ry="67.069" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width=".63159"/>
+ <ellipse transform="rotate(14.758)" cx="122.18" cy="71.227" rx="99.687" ry="99.69" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width=".532"/>
+ <g transform="rotate(14.758 100 100)">
+  <g stroke="#ccc" stroke-width=".63159">
+   <ellipse cx="100" cy="100" rx="53.414" ry="53.416" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="m99.949 99.548-53.362 0.45242" fill="#e2e2e2" stroke-dasharray="0.631594, 1.26318"/>
+   <ellipse cx="46.587" cy="100" rx="5.8647" ry="5.8649" fill="#f8f8f8" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
+  <ellipse cx="100" cy="100" rx="9.8965" ry="9.8968" fill="#ffe680" stroke="#fea" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1316"/>
  </g>
- <g fill="#b3b3b3" font-family="sans-serif" font-size="6.1114px" letter-spacing="0px" stroke-width=".15279">
-  <text transform="scale(.99998 1)" x="35.623596" y="43.531193" style="line-height:1.25" xml:space="preserve"><tspan x="35.623596" y="43.531193" fill="#b3b3b3" stroke-width=".15279">Feb</tspan></text>
-  <text transform="scale(.99998 1)" x="72.382996" y="21.927345" style="line-height:1.25" xml:space="preserve"><tspan x="72.382996" y="21.927345" fill="#b3b3b3" stroke-width=".15279">Mar</tspan></text>
-  <text transform="scale(.99998 1)" x="116.07411" y="21.358879" style="line-height:1.25" xml:space="preserve"><tspan x="116.07411" y="21.358879" fill="#b3b3b3" stroke-width=".15279">Apr</tspan></text>
-  <text transform="scale(.99998 1)" x="152.25908" y="42.862755" style="line-height:1.25" xml:space="preserve"><tspan x="152.25908" y="42.862755" fill="#b3b3b3" stroke-width=".15279">May</tspan></text>
-  <text transform="scale(.99998 1)" x="175.11176" y="80.67704" style="line-height:1.25" xml:space="preserve"><tspan x="175.11176" y="80.67704" fill="#b3b3b3" stroke-width=".15279">Jun</tspan></text>
-  <text transform="scale(.99998 1)" x="176.22183" y="123.78477" style="line-height:1.25" xml:space="preserve"><tspan x="176.22183" y="123.78477" fill="#b3b3b3" stroke-width=".15279">Jul</tspan></text>
-  <text transform="scale(.99998 1)" x="152.99017" y="160.3457" style="line-height:1.25" xml:space="preserve"><tspan x="152.99017" y="160.3457" fill="#b3b3b3" stroke-width=".15279">Aug</tspan></text>
-  <text transform="scale(.99998 1)" x="115.56979" y="181.90628" style="line-height:1.25" xml:space="preserve"><tspan x="115.56979" y="181.90628" fill="#b3b3b3" stroke-width=".15279">Sep</tspan></text>
-  <text transform="scale(.99998 1)" x="73.102165" y="182.48071" style="line-height:1.25" xml:space="preserve"><tspan x="73.102165" y="182.48071" fill="#b3b3b3" stroke-width=".15279">Oct</tspan></text>
-  <text transform="scale(.99998 1)" x="35.034241" y="160.9306" style="line-height:1.25" xml:space="preserve"><tspan x="35.034241" y="160.9306" fill="#b3b3b3" stroke-width=".15279">Nov</tspan></text>
-  <text transform="scale(.99998 1)" x="13.679568" y="123.69225" style="line-height:1.25" xml:space="preserve"><tspan x="13.679568" y="123.69225" fill="#b3b3b3" stroke-width=".15279">Dec</tspan></text>
-  <text transform="scale(.99998 1)" x="14.700126" y="80.67704" style="line-height:1.25" xml:space="preserve"><tspan x="14.700126" y="80.67704" fill="#b3b3b3" font-family="sans-serif" stroke-width=".15279">Jan</tspan></text>
- </g>
- <g transform="translate(-257.6 155.36)" fill="none" stroke="#ccc" stroke-width=".5">
+ <g transform="translate(-257.6 155.31)" fill="none" stroke="#ccc" stroke-width=".5">
   <g stroke-linecap="round" stroke-linejoin="round">
    <path d="m271.82-104.88c-0.30996 0.10116-0.61325 0.20384-0.91777 0.30644a99.687 99.69 0 0 0-12.992 48.5c0.21241 0.2383 0.42292 0.47648 0.64078 0.71624h31.977a67.067 67.069 0 0 1 8.986-33.534z"/>
    <path d="m306.99-141.25a99.687 99.69 0 0 0-35.297 35.307c0.0413 0.35251 0.081 0.70176 0.12661 1.0609l27.693 15.989a67.067 67.069 0 0 1 24.548-24.548l-15.989-27.695c-0.36152-0.04-0.72122-0.076-1.0816-0.11421z"/>
