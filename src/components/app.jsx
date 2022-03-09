@@ -39,7 +39,12 @@ class App extends Component {
   };
 
   setHoverFalse = () => {
-    this.setState({ hovering: false });
+    this.setState({
+      hovering: false, 
+      day: this.state.selectedDay,
+      suffix: this.state.selectedSuffix,
+      month: this.state.selectedMonth,
+    });
   };
 
   render() {
