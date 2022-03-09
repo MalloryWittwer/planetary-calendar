@@ -25,8 +25,20 @@ class SunDiagram extends Component {
   }
 
   handleClick(area) {
-    console.log(`Month selected: ${monthDico[area.id]}`);
+    document.querySelectorAll(".areas-sun path").forEach((area) => {
+      area.classList.remove("active");
+    });
     area.classList.add('active');
+    const month = monthDico[area.id];
+    this.props.actionFnct(month);
+  }
+
+  adjustSize() {
+    const calendar = document.querySelector(".calendar");
+    const calendarWidth = calendar.getBoundingClientRect().width;
+    const diagram = document.querySelector("#sun-diagram");
+    diagram.style.width = `${Number.parseInt(calendarWidth / 3)}px`;
+    diagram.style.height = `${Number.parseInt(calendarWidth / 3)}px`;
   }
 
   componentDidMount() {
@@ -34,10 +46,9 @@ class SunDiagram extends Component {
       area.addEventListener("mouseover", (e) => this.handleHover(area));
       area.addEventListener("click", (e) => this.handleClick(area));
     });
-
-    const diagram = document.querySelector("#sun-diagram");
-    diagram.style.width = '400px';
-    diagram.style.height = '322px';
+    
+    window.addEventListener("resize", this.adjustSize);
+    this.adjustSize();
   }
 
   render() {

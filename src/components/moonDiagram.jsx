@@ -13,8 +13,20 @@ class MoonDiagram extends Component {
   }
 
   handleClick(area) {
-    console.log(`Selected day is: ${Number.parseInt(area.id, 10) + 1}`);
+    document.querySelectorAll(".areas-moon path").forEach((area) => {
+      area.classList.remove("active");
+    });
     area.classList.add("active");
+    const day = Number.parseInt(area.id, 10) + 1;
+    this.props.actionFnct(day);
+  }
+
+  adjustSize() {
+    const calendar = document.querySelector(".calendar");
+    const calendarWidth = calendar.getBoundingClientRect().width;
+    const diagram = document.querySelector("#moon-diagram");
+    diagram.style.width = `${Number.parseInt(calendarWidth / 3)}px`;
+    diagram.style.height = `${Number.parseInt(calendarWidth / 3)}px`;
   }
 
   componentDidMount() {
@@ -23,9 +35,8 @@ class MoonDiagram extends Component {
       area.addEventListener("click", (e) => this.handleClick(area));
     });
 
-    const diagram = document.querySelector("#moon-diagram");
-    diagram.style.width = '400px';
-    diagram.style.height = '322px';
+    window.addEventListener("resize", this.adjustSize);
+    this.adjustSize();
   }
 
   render() {

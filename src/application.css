@@ -22,7 +22,6 @@ body {
 
 .diagram-container {
   border: 1px solid red;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +65,54 @@ svg {
   margin-bottom: 20px;
   background: var(--diagramHover);
   height: 200px;
-  width: 80vw;
+  width: 60vw;
   border-radius: 10px;
   border: 2px solid var(--gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.calendar-inside {
+  background: white;
+  border-radius: 10px;
+  border: 2px solid var(--gray);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.left-block, .right-block {
+  height: 90%;
+  margin: 10px;
+}
+
+.left-block {
+  border-right: 2px solid var(--gray);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.right-block {
+  flex-grow: 1;
+  background-color: var(--diagramHover);
+  color: var(--gray);
+}
+
+.month {
+  padding-right: 12px;
+  color: var(--gray);
+  font-size: 3rem;
+  margin: 0;
+}
+
+.day {
+  padding-right: 12px;
+  color: var(--gray);
+  font-size: 2rem;
+  margin: 0;
 }
