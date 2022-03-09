@@ -1,12 +1,22 @@
 import React, { Component } from "react";
-import * as d3 from "d3";
 
-const margin = { top: 0, right: 0, bottom: 60, left: 60 },
-  width = 860 - margin.left - margin.right,
-  height = 704 - margin.top - margin.bottom;
+const monthDico = {
+  0: "January",
+  1: "February",
+  2: "March",
+  3: "April",
+  4: "May",
+  5: "June",
+  6: "July",
+  7: "August",
+  8: "September",
+  9: "October",
+  10: "November",
+  11: "December",
+};
 
-class Diagram extends Component {
-  handleGotClicked(area) {
+class SunDiagram extends Component {
+  handleHover(area) {
     const angle = Number.parseInt(Number.parseFloat(area.id, 10) * 30, 10);
     console.log(`angle is ${angle}.`);
     document.getElementById(
@@ -14,15 +24,25 @@ class Diagram extends Component {
     ).style.transform = `rotate(${angle}deg)`;
   }
 
+  handleClick(area) {
+    console.log(`Month selected: ${monthDico[area.id]}`);
+    area.classList.add('active');
+  }
+
   componentDidMount() {
-    document.querySelectorAll(".areas path").forEach((area) => {
-      area.addEventListener("mouseover", (e) => this.handleGotClicked(area));
+    document.querySelectorAll(".areas-sun path").forEach((area) => {
+      area.addEventListener("mouseover", (e) => this.handleHover(area));
+      area.addEventListener("click", (e) => this.handleClick(area));
     });
+
+    const diagram = document.querySelector("#sun-diagram");
+    diagram.style.width = '400px';
+    diagram.style.height = '322px';
   }
 
   render() {
     return (
-      <div id="diagram">
+      <div className="diagram" id="sun-diagram">
         <svg
           id="sun-rotable"
           width="200mm"
@@ -258,7 +278,11 @@ class Diagram extends Component {
 
         {/* AREAS */}
         <svg width="200mm" height="200mm" version="1.1" viewBox="0 0 200 200">
-          <g className="areas" transform="translate(-257.6 155.36)" fill="none">
+          <g
+            className="areas areas-sun"
+            transform="translate(-257.6 155.36)"
+            fill="none"
+          >
             <path
               id="0"
               d="m271.82-104.88c-0.30996 0.10116-0.61325 0.20384-0.91777 0.30644a99.687 99.69 0 0 0-12.992 48.5c0.21241 0.2383 0.42292 0.47648 0.64078 0.71624h31.977a67.067 67.069 0 0 1 8.986-33.534z"
@@ -314,4 +338,4 @@ class Diagram extends Component {
   }
 }
 
-export default Diagram;
+export default SunDiagram;

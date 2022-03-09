@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
-import Diagram from "./diagram";
+import SunDiagram from "./sunDiagram";
+import MoonDiagram from "./moonDiagram";
+import Calendar from "./calendar";
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +14,11 @@ class App extends Component {
     return (
       <>
         <div className="main-container">
-          <Diagram />
+          <div className="diagram-container">
+            <SunDiagram />
+            <MoonDiagram />
+          </div>
+          <Calendar />
         </div>
       </>
     );

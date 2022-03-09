@@ -2,28 +2,35 @@
   --bodyBG: white;
   --diagram: rgba(0, 0, 0, 0);
   --diagramHover: rgb(243, 243, 243);
+  --gray: #CCCCCC;
 }
 
 body {
   margin: 0;
   padding: 0;
   background: var(--bodyBG);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-container {
   height: 100vh;
-  overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#diagram {
+.diagram-container {
+  border: 1px solid red;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.diagram {
   position: relative;
-  top: -25px;
-  height: 644px;
-  width: 800px;
 }
 
 svg {
@@ -34,7 +41,8 @@ svg {
   height: 100%;
 }
 
-#svg-outlines, #svg-annotations {
+#svg-outlines,
+#svg-annotations {
   pointer-events: none;
 }
 
@@ -45,5 +53,20 @@ svg {
 .areas path:hover {
   cursor: pointer;
   stroke: rgb(197, 197, 197);
+  stroke-width: 0.5px;
+}
+
+.active {
+  stroke: rgb(197, 197, 197);
   stroke-width: 1px;
+}
+
+.calendar {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: var(--diagramHover);
+  height: 200px;
+  width: 80vw;
+  border-radius: 10px;
+  border: 2px solid var(--gray);
 }
