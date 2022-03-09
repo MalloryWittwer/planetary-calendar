@@ -7,7 +7,7 @@ class Calendar extends Component {
         <div className="calendar-inside">
           <div className="left-block">
             <p className="month">{this.props.month}</p>
-            <p className="day">{this.props.day}</p>
+            <p className="day">{this.props.day}<sup>{this.props.suffix}</sup></p>
           </div>
           <div className="right-block"></div>
         </div>

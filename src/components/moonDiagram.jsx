@@ -1,15 +1,55 @@
 import React, { Component } from "react";
 
+const dayDico = {
+  0: ["1", "st"],
+  1: ["2", "nd"],
+  2: ["3", "rd"],
+  3: ["4", "th"],
+  4: ["5", "th"],
+  5: ["6", "th"],
+  6: ["7", "th"],
+  7: ["8", "th"],
+  8: ["9", "th"],
+  9: ["10", "th"],
+  10: ["11", "th"],
+  11: ["12", "th"],
+  12: ["13", "th"],
+  13: ["14", "th"],
+  14: ["15", "th"],
+  15: ["16", "th"],
+  16: ["17", "th"],
+  17: ["18", "th"],
+  18: ["19", "th"],
+  19: ["20", "th"],
+  20: ["21", "th"],
+  21: ["22", "th"],
+  22: ["23", "th"],
+  23: ["24", "th"],
+  24: ["25", "th"],
+  25: ["26", "th"],
+  26: ["27", "th"],
+  27: ["28", "th"],
+  28: ["29", "th"],
+  29: ["30", "th"],
+  30: ["31", "st"],
+};
+
 class MoonDiagram extends Component {
   handleHover(area) {
+    this.props.setHoverTrue();
     const angle = Number.parseInt(
       (Number.parseFloat(area.id, 10) * 360) / 31,
       10
     );
-    console.log(`MOON ANGLE is ${angle}. (id=${area.id})`);
     document.getElementById(
       "moon-rotable"
     ).style.transform = `rotate(${angle}deg)`;
+    const [day, suffix] = dayDico[area.id]
+    this.props.dayHoverFnct(day, suffix);
+  }
+
+  handleMouseOut() {
+    this.props.setHoverFalse();
   }
 
   handleClick(area) {
@@ -17,8 +57,8 @@ class MoonDiagram extends Component {
       area.classList.remove("active");
     });
     area.classList.add("active");
-    const day = Number.parseInt(area.id, 10) + 1;
-    this.props.actionFnct(day);
+    const [day, suffix] = dayDico[area.id]
+    this.props.dayClickFnct(day, suffix);
   }
 
   adjustSize() {
@@ -32,6 +72,7 @@ class MoonDiagram extends Component {
   componentDidMount() {
     document.querySelectorAll(".areas-moon path").forEach((area) => {
       area.addEventListener("mouseover", (e) => this.handleHover(area));
+      area.addEventListener("mouseout", (e) => this.handleMouseOut());
       area.addEventListener("click", (e) => this.handleClick(area));
     });
 

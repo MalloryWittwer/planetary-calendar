@@ -9,30 +9,70 @@ class App extends Component {
     super(props);
     this.state = {
       day: "1",
+      suffix: "st",
       month: "January",
+      selectedDay: "1",
+      selectedSuffix: "st",
+      selectedMonth: "January",
+      hovering: false,
     };
   }
 
-  selectDay = (day) => {
-    this.setState({ day });
+  selectDay = (day, suffix) => {
+    this.setState({ selectedDay: day, selectedSuffix: suffix });
   };
 
   selectMonth = (month) => {
+    this.setState({ selectedMonth: month });
+  };
+
+  selectHoverDay = (day, suffix) => {
+    this.setState({ day, suffix });
+  };
+
+  selectHoverMonth = (month) => {
     this.setState({ month });
   };
 
+  setHoverTrue = () => {
+    this.setState({ hovering: true });
+  };
+
+  setHoverFalse = () => {
+    this.setState({ hovering: false });
+  };
+
   render() {
+    let d;
+    let s;
+    let m;
+    if (this.state.hovering) {
+      d = this.state.day;
+      s = this.state.suffix;
+      m = this.state.month;
+    } else {
+      d = this.state.selectedDay;
+      s = this.state.selectedSuffix;
+      m = this.state.selectedMonth;
+    }
     return (
       <>
         <div className="main-container">
           <div className="diagram-container">
-            <SunDiagram actionFnct={this.selectMonth} />
-            <MoonDiagram actionFnct={this.selectDay} />
+            <SunDiagram
+              monthClickFnct={this.selectMonth}
+              monthHoverFnct={this.selectHoverMonth}
+              setHoverFalse={this.setHoverFalse}
+              setHoverTrue={this.setHoverTrue}
+            />
+            <MoonDiagram
+              dayClickFnct={this.selectDay}
+              dayHoverFnct={this.selectHoverDay}
+              setHoverFalse={this.setHoverFalse}
+              setHoverTrue={this.setHoverTrue}
+            />
           </div>
-          <Calendar 
-           day={this.state.day} 
-           month={this.state.month}
-          />
+          <Calendar day={d} suffix={s} month={m} />
         </div>
       </>
     );

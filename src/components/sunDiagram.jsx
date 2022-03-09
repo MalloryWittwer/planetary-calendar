@@ -17,20 +17,26 @@ const monthDico = {
 
 class SunDiagram extends Component {
   handleHover(area) {
+    this.props.setHoverTrue();
     const angle = Number.parseInt(Number.parseFloat(area.id, 10) * 30, 10);
-    console.log(`angle is ${angle}.`);
     document.getElementById(
       "sun-rotable"
     ).style.transform = `rotate(${angle}deg)`;
+    const month = monthDico[area.id];
+    this.props.monthHoverFnct(month);
+  }
+
+  handleMouseOut() {
+    this.props.setHoverFalse();
   }
 
   handleClick(area) {
     document.querySelectorAll(".areas-sun path").forEach((area) => {
       area.classList.remove("active");
     });
-    area.classList.add('active');
+    area.classList.add("active");
     const month = monthDico[area.id];
-    this.props.actionFnct(month);
+    this.props.monthClickFnct(month);
   }
 
   adjustSize() {
@@ -44,6 +50,7 @@ class SunDiagram extends Component {
   componentDidMount() {
     document.querySelectorAll(".areas-sun path").forEach((area) => {
       area.addEventListener("mouseover", (e) => this.handleHover(area));
+      area.addEventListener("mouseout", (e) => this.handleMouseOut());
       area.addEventListener("click", (e) => this.handleClick(area));
     });
 
