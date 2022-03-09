@@ -25,8 +25,8 @@ class MoonDiagram extends Component {
     const calendar = document.querySelector(".calendar");
     const calendarWidth = calendar.getBoundingClientRect().width;
     const diagram = document.querySelector("#moon-diagram");
-    diagram.style.width = `${Number.parseInt(calendarWidth / 3)}px`;
-    diagram.style.height = `${Number.parseInt(calendarWidth / 3)}px`;
+    diagram.style.width = `${Number.parseInt(calendarWidth * 0.4)}px`;
+    diagram.style.height = `${Number.parseInt(calendarWidth * 0.4)}px`;
   }
 
   componentDidMount() {

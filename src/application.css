@@ -21,7 +21,6 @@ body {
 }
 
 .diagram-container {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,6 +29,7 @@ body {
 
 .diagram {
   position: relative;
+  margin: 10px;
 }
 
 svg {
@@ -95,6 +95,7 @@ svg {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-around;
+  min-width: 250px;
 }
 
 .right-block {

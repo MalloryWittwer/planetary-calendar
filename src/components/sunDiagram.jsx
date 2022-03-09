@@ -37,8 +37,8 @@ class SunDiagram extends Component {
     const calendar = document.querySelector(".calendar");
     const calendarWidth = calendar.getBoundingClientRect().width;
     const diagram = document.querySelector("#sun-diagram");
-    diagram.style.width = `${Number.parseInt(calendarWidth / 3)}px`;
-    diagram.style.height = `${Number.parseInt(calendarWidth / 3)}px`;
+    diagram.style.width = `${Number.parseInt(calendarWidth * 0.4)}px`;
+    diagram.style.height = `${Number.parseInt(calendarWidth * 0.4)}px`;
   }
 
   componentDidMount() {
@@ -46,7 +46,7 @@ class SunDiagram extends Component {
       area.addEventListener("mouseover", (e) => this.handleHover(area));
       area.addEventListener("click", (e) => this.handleClick(area));
     });
-    
+
     window.addEventListener("resize", this.adjustSize);
     this.adjustSize();
   }
