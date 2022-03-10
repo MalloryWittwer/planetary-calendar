@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/planetary-calendar/static/css/main.dd31c01c.css",
-    "main.js": "/planetary-calendar/static/js/main.93bc0a3a.js",
+    "main.css": "/planetary-calendar/static/css/main.b43caaba.css",
+    "main.js": "/planetary-calendar/static/js/main.38e6296c.js",
     "index.html": "/planetary-calendar/index.html",
-    "main.dd31c01c.css.map": "/planetary-calendar/static/css/main.dd31c01c.css.map",
-    "main.93bc0a3a.js.map": "/planetary-calendar/static/js/main.93bc0a3a.js.map"
+    "main.b43caaba.css.map": "/planetary-calendar/static/css/main.b43caaba.css.map",
+    "main.38e6296c.js.map": "/planetary-calendar/static/js/main.38e6296c.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd31c01c.css",
-    "static/js/main.93bc0a3a.js"
+    "static/css/main.b43caaba.css",
+    "static/js/main.38e6296c.js"
   ]
 }
