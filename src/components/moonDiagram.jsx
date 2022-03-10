@@ -163,7 +163,7 @@ class MoonDiagram extends Component {
           </g>
         </svg>
 
-        <svg viewBox="0 0 200 200">
+        <svg id="moon-annotations" viewBox="0 0 200 200">
           <g
             fill="#cccccc"
             fontFamily="sans-serif"
@@ -523,7 +523,7 @@ class MoonDiagram extends Component {
           </g>
         </svg>
 
-        <svg viewBox="0 0 200 200">
+        <svg id="moon-areas" viewBox="0 0 200 200">
           <g className="areas areas-moon" fill="none">
             <path
               id="0"

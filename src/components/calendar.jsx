@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class Calendar extends Component {
   getMessage = () => {
     const { agenda, month, day } = this.props;
-    console.log("day is ", day);
     if (agenda) {
       const date = agenda.filter(
         (x) => x.month === month && x.day === Number.parseInt(day, 10)
