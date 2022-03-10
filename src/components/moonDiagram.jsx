@@ -35,6 +35,13 @@ const dayDico = {
 };
 
 class MoonDiagram extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedDayID: 0,
+    };
+  }
+
   handleHover(area) {
     this.props.setHoverTrue();
     const angle = Number.parseInt(
@@ -44,11 +51,18 @@ class MoonDiagram extends Component {
     document.getElementById(
       "moon-rotable"
     ).style.transform = `rotate(${angle}deg)`;
-    const [day, suffix] = dayDico[area.id]
+    const [day, suffix] = dayDico[area.id];
     this.props.dayHoverFnct(day, suffix);
   }
 
   handleMouseOut() {
+    const angle = Number.parseInt(
+      (Number.parseFloat(this.state.selectedDayID, 10) * 360) / 31,
+      10
+    );
+    document.getElementById(
+      "moon-rotable"
+    ).style.transform = `rotate(${angle}deg)`;
     this.props.setHoverFalse();
   }
 
@@ -57,8 +71,9 @@ class MoonDiagram extends Component {
       area.classList.remove("active");
     });
     area.classList.add("active");
-    const [day, suffix] = dayDico[area.id]
+    const [day, suffix] = dayDico[area.id];
     this.props.dayClickFnct(day, suffix);
+    this.setState({ selectedDayID: area.id });
   }
 
   adjustSize() {

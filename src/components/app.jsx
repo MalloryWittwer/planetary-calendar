@@ -40,11 +40,17 @@ class App extends Component {
 
   setHoverFalse = () => {
     this.setState({
-      hovering: false, 
+      hovering: false,
       day: this.state.selectedDay,
       suffix: this.state.selectedSuffix,
       month: this.state.selectedMonth,
     });
+  };
+
+  componentDidMount = () => {
+    fetch(process.env.PUBLIC_URL + "/agenda.json")
+      .then((r) => r.json())
+      .then((agenda) => this.setState({ agenda }));
   };
 
   render() {
@@ -77,7 +83,7 @@ class App extends Component {
               setHoverTrue={this.setHoverTrue}
             />
           </div>
-          <Calendar day={d} suffix={s} month={m} />
+          <Calendar day={d} suffix={s} month={m} agenda={this.state.agenda} />
         </div>
       </>
     );

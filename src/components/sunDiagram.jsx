@@ -16,6 +16,13 @@ const monthDico = {
 };
 
 class SunDiagram extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedMonthID: 0,
+    };
+  }
+
   handleHover(area) {
     this.props.setHoverTrue();
     const angle = Number.parseInt(Number.parseFloat(area.id, 10) * 30, 10);
@@ -27,6 +34,13 @@ class SunDiagram extends Component {
   }
 
   handleMouseOut() {
+    const angle = Number.parseInt(
+      Number.parseFloat(this.state.selectedMonthID, 10) * 30,
+      10
+    );
+    document.getElementById(
+      "sun-rotable"
+    ).style.transform = `rotate(${angle}deg)`;
     this.props.setHoverFalse();
   }
 
@@ -37,6 +51,7 @@ class SunDiagram extends Component {
     area.classList.add("active");
     const month = monthDico[area.id];
     this.props.monthClickFnct(month);
+    this.setState({ selectedMonthID: area.id });
   }
 
   adjustSize() {
