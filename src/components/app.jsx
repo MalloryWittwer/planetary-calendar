@@ -50,7 +50,14 @@ class App extends Component {
   componentDidMount = () => {
     fetch(process.env.PUBLIC_URL + "/agenda.json")
       .then((r) => r.json())
-      .then((agenda) => this.setState({ agenda }));
+      .then((agenda) => {
+        let key = 0
+        agenda.forEach((item) => {
+          item.key = key;
+          key++;
+        });
+        this.setState({ agenda });
+      });
   };
 
   render() {

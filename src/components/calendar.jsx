@@ -30,7 +30,7 @@ class Calendar extends Component {
           </div>
           <ul className="right-block">
             {this.getMessage().map((item) => {
-              return <li>{item.message}</li>;
+              return <li key={item.key}>{item.message}</li>;
             })}
           </ul>
           <div className="add-item">+</div>
