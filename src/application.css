@@ -101,7 +101,6 @@ svg {
 
 .right-block {
   flex-grow: 1;
-  /* background-color: var(--diagramHover); */
   color: var(--gray);
   padding: 10px;
   box-sizing: border-box;

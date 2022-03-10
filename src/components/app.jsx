@@ -88,6 +88,7 @@ class App extends Component {
               dayHoverFnct={this.selectHoverDay}
               setHoverFalse={this.setHoverFalse}
               setHoverTrue={this.setHoverTrue}
+              month={this.state.month}
             />
           </div>
           <Calendar day={d} suffix={s} month={m} agenda={this.state.agenda} />

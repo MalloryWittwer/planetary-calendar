@@ -107,7 +107,7 @@ class MoonDiagram extends Component {
           planetStroke={"#b9dbff"}
           planetFill={"#81beff"}
         />
-        <MoonAnnotations />
+        <MoonAnnotations month={this.props.month} />
 
         <svg id="moon-areas" viewBox="0 0 200 200">
           <g className="areas areas-moon" fill="none">

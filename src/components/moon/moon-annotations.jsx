@@ -164,18 +164,32 @@ class MoonAnnotations extends Component {
       <div>
         <svg id="moon-annotations" viewBox="0 0 200 200">
           {coordinates.map((coords) => {
-            return (
-              <text
-                key={Number.parseInt(coords.label, 10) - 1}
-                transform="rotate(-.76249)"
-                x={coords.x}
-                y={coords.y}
-              >
-                <tspan fill="#cccccc" fontSize="7px" strokeWidth=".11">
-                  {coords.label}
-                </tspan>
-              </text>
-            );
+            if (
+              this.props.month === "February" &&
+              ["29", "30", "31"].includes(coords.label)
+            ) {
+              return;
+            } else if (
+              ["April", "June", "September", "November"].includes(
+                this.props.month
+              ) &&
+              ["31"].includes(coords.label)
+            ) {
+              return;
+            } else {
+              return (
+                <text
+                  key={Number.parseInt(coords.label, 10) - 1}
+                  transform="rotate(-.76249)"
+                  x={coords.x}
+                  y={coords.y}
+                >
+                  <tspan fill="#cccccc" fontSize="7px" strokeWidth=".11">
+                    {coords.label}
+                  </tspan>
+                </text>
+              );
+            }
           })}
           <text x="91" y="103">
             <tspan fill="#b9dbff" fontSize="8px">
