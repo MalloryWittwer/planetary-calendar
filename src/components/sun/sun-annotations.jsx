@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 const coordinates = [
   {
-    x: 13.209093,
-    y: 94.197884,
+    x: 14.700126,
+    y: 80.67704,
     label: "Jan",
   },
   {
@@ -12,53 +12,53 @@ const coordinates = [
     label: "Feb",
   },
   {
-    x: 23.843937,
-    y: 62.285862,
+    x: 72.382996,
+    y: 21.927345,
     label: "Mar",
   },
   {
-    x: 33.765167,
-    y: 48.575062,
+    x: 116.07411,
+    y: 21.358879,
     label: "Apr",
   },
   {
-    x: 46.073666,
-    y: 37.07642,
+    x: 152.25908,
+    y: 42.862755,
     label: "May",
   },
   {
-    x: 60.569897,
-    y: 28.413776,
+    x: 175.11176,
+    y: 80.67704,
     label: "Jun",
   },
   {
-    x: 76.497574,
-    y: 22.798801,
+    x: 176.22183,
+    y: 123.78477,
     label: "Jul",
   },
   {
-    x: 93.271935,
-    y: 20.499577,
+    x: 152.99017,
+    y: 160.3457,
     label: "Aug",
   },
   {
-    x: 110.16148,
-    y: 21.61713,
+    x: 115.56979,
+    y: 181.90628,
     label: "Sep",
   },
   {
-    x: 123.90833,
-    y: 26.09885,
+    x: 73.102165,
+    y: 182.48071,
     label: "Oct",
   },
   {
-    x: 139.09743,
-    y: 33.780109,
+    x: 35.034241,
+    y: 160.9306,
     label: "Nov",
   },
   {
-    x: 139.09743,
-    y: 33.780109,
+    x: 13.679568,
+    y: 123.69225,
     label: "Dec",
   },
 ];
@@ -72,7 +72,7 @@ class SunAnnotations extends Component {
             return (
               <text
                 key={Number.parseInt(coords.label, 10) - 1}
-                transform="rotate(-.76249)"
+                transform="scale(.99998 1)"
                 x={coords.x}
                 y={coords.y}
               >
@@ -82,8 +82,8 @@ class SunAnnotations extends Component {
               </text>
             );
           })}
-          <text x="91" y="103">
-            <tspan fill="#b9dbff" fontSize="8px">
+          <text x="93" y="103">
+            <tspan fill="rgb(250, 249, 244)" fontSize="8px">
               Sun
             </tspan>
           </text>
