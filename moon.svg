@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200mm" height="200mm" version="1.1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g>
+  <circle transform="rotate(-36.477)" cx="20.96" cy="139.86" r="99.37" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2592"/>
+  <g>
+   <g stroke="#ccc" stroke-width=".62958">
+    <circle transform="rotate(-36.477)" cx="20.96" cy="139.86" r="53.245" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m100 100-51.788-5.574" fill="#ccc" stroke-dasharray="0.629579, 1.25915"/>
+    <circle transform="rotate(-36.477)" cx="-17.369" cy="104.59" r="5.8461" fill="#f8f8f8" stroke-linecap="round" stroke-linejoin="round"/>
+   </g>
+   <circle transform="rotate(-36.477)" cx="20.96" cy="139.86" r="10.042" fill="#81beff" stroke="#b9dbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7711"/>
+  </g>
+  <circle transform="rotate(-36.477)" cx="20.96" cy="139.86" r="66.584" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width=".7873"/>
+ </g>
+</svg>

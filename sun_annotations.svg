@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200mm" height="200mm" version="1.1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g fill="#b3b3b3" font-family="sans-serif" font-size="6.1114px" letter-spacing="0px" stroke-width=".15279">
+  <text transform="scale(.99998 1)" x="35.623596" y="43.531193" style="line-height:1.25" xml:space="preserve"><tspan x="35.623596" y="43.531193" fill="#b3b3b3" stroke-width=".15279">Feb</tspan></text>
+  <text transform="scale(.99998 1)" x="72.382996" y="21.927345" style="line-height:1.25" xml:space="preserve"><tspan x="72.382996" y="21.927345" fill="#b3b3b3" stroke-width=".15279">Mar</tspan></text>
+  <text transform="scale(.99998 1)" x="116.07411" y="21.358879" style="line-height:1.25" xml:space="preserve"><tspan x="116.07411" y="21.358879" fill="#b3b3b3" stroke-width=".15279">Apr</tspan></text>
+  <text transform="scale(.99998 1)" x="152.25908" y="42.862755" style="line-height:1.25" xml:space="preserve"><tspan x="152.25908" y="42.862755" fill="#b3b3b3" stroke-width=".15279">May</tspan></text>
+  <text transform="scale(.99998 1)" x="175.11176" y="80.67704" style="line-height:1.25" xml:space="preserve"><tspan x="175.11176" y="80.67704" fill="#b3b3b3" stroke-width=".15279">Jun</tspan></text>
+  <text transform="scale(.99998 1)" x="176.22183" y="123.78477" style="line-height:1.25" xml:space="preserve"><tspan x="176.22183" y="123.78477" fill="#b3b3b3" stroke-width=".15279">Jul</tspan></text>
+  <text transform="scale(.99998 1)" x="152.99017" y="160.3457" style="line-height:1.25" xml:space="preserve"><tspan x="152.99017" y="160.3457" fill="#b3b3b3" stroke-width=".15279">Aug</tspan></text>
+  <text transform="scale(.99998 1)" x="115.56979" y="181.90628" style="line-height:1.25" xml:space="preserve"><tspan x="115.56979" y="181.90628" fill="#b3b3b3" stroke-width=".15279">Sep</tspan></text>
+  <text transform="scale(.99998 1)" x="73.102165" y="182.48071" style="line-height:1.25" xml:space="preserve"><tspan x="73.102165" y="182.48071" fill="#b3b3b3" stroke-width=".15279">Oct</tspan></text>
+  <text transform="scale(.99998 1)" x="35.034241" y="160.9306" style="line-height:1.25" xml:space="preserve"><tspan x="35.034241" y="160.9306" fill="#b3b3b3" stroke-width=".15279">Nov</tspan></text>
+  <text transform="scale(.99998 1)" x="13.679568" y="123.69225" style="line-height:1.25" xml:space="preserve"><tspan x="13.679568" y="123.69225" fill="#b3b3b3" stroke-width=".15279">Dec</tspan></text>
+  <text transform="scale(.99998 1)" x="14.700126" y="80.67704" style="line-height:1.25" xml:space="preserve"><tspan x="14.700126" y="80.67704" fill="#b3b3b3" font-family="sans-serif" stroke-width=".15279">Jan</tspan></text>
+ </g>
+</svg>
