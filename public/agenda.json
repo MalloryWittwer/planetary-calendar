@@ -6,6 +6,11 @@
     },
     {
         "month": "January",
+        "day": 1,
+        "message": "16:30 - Badminton training."
+    },
+    {
+        "month": "January",
         "day": 2,
         "message": "Call Paul from the office."
     },

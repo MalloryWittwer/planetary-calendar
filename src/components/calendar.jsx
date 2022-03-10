@@ -7,14 +7,14 @@ class Calendar extends Component {
     if (agenda) {
       const date = agenda.filter(
         (x) => x.month === month && x.day === Number.parseInt(day, 10)
-      )[0];
+      );
       if (date) {
-        return date.message;
+        return date;
       } else {
-        return "";
+        return [];
       }
     } else {
-      return "";
+      return [];
     }
   };
 
@@ -29,7 +29,12 @@ class Calendar extends Component {
               <sup>{this.props.suffix}</sup>
             </p>
           </div>
-          <div className="right-block">{this.getMessage()}</div>
+          <ul className="right-block">
+            {this.getMessage().map((item) => {
+              return <li>{item.message}</li>;
+            })}
+          </ul>
+          <div className="add-item">+</div>
         </div>
       </div>
     );
