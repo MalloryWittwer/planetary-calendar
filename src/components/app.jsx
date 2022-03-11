@@ -61,9 +61,7 @@ class App extends Component {
   };
 
   render() {
-    let d;
-    let s;
-    let m;
+    let d, s, m;
     if (this.state.hovering) {
       d = this.state.day;
       s = this.state.suffix;

@@ -2,7 +2,7 @@
   --bodyBG: white;
   --diagram: rgba(0, 0, 0, 0);
   --diagramHover: rgb(243, 243, 243);
-  --gray: #CCCCCC;
+  --gray: #cccccc;
 }
 
 body {
@@ -61,11 +61,11 @@ svg {
 }
 
 .calendar {
+  width: 60vw;
   margin: 0 auto;
   margin-bottom: 20px;
   background: var(--diagramHover);
   height: 200px;
-  width: 60vw;
   border-radius: 10px;
   border: 2px solid var(--gray);
   display: flex;
@@ -85,7 +85,8 @@ svg {
   position: relative;
 }
 
-.left-block, .right-block {
+.left-block,
+.right-block {
   height: 90%;
   margin: 10px;
 }
@@ -114,6 +115,7 @@ svg {
   align-items: flex-end;
   border-bottom: 1px solid var(--gray);
   height: 20%;
+  white-space: nowrap;
 }
 
 .month {
@@ -150,4 +152,36 @@ svg {
 
 .invisible {
   display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .calendar {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calendar {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .calendar {
+    height: 320px;
+  }
+  
+  .calendar-inside {
+    flex-direction: column;
+  }
+
+  .left-block, .right-block {
+    width: 100%;
+  }
+
+  .left-block {
+    border: none;
+    flex-direction: row;
+    justify-content: center;
+  }
 }

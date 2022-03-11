@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class MoonRotable extends Component {
+class Rotable extends Component {
   render() {
     const sw = "0.8";
     const sc = "#ccc"
@@ -62,4 +62,4 @@ class MoonRotable extends Component {
   }
 }
 
-export default MoonRotable;
+export default Rotable;

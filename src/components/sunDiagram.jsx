@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import MoonRotable from "./moon/moon-rotable";
+import Rotable from "./rotable";
 import SunAnnotations from "./sun/sun-annotations";
 
 const monthDico = {
@@ -25,27 +25,22 @@ class SunDiagram extends Component {
     };
   }
 
-  handleHover(area) {
-    this.props.setHoverTrue();
-    const angle = Number.parseInt(
-      Number.parseFloat(area.id, 10) * 30 + 9.2,
-      10
-    );
+  rotate(x) {
+    const angle = Number.parseInt(Number.parseFloat(x, 10) * 30 + 9.2, 10);
     document.getElementById(
       "sun-rotable"
     ).style.transform = `rotate(${angle}deg)`;
+  }
+
+  handleHover(area) {
+    this.props.setHoverTrue();
+    this.rotate(area.id);
     const month = monthDico[area.id];
     this.props.monthHoverFnct(month);
   }
 
   handleMouseOut() {
-    const angle = Number.parseInt(
-      Number.parseFloat(this.state.selectedMonthID, 10) * 30 + 9.2,
-      10
-    );
-    document.getElementById(
-      "sun-rotable"
-    ).style.transform = `rotate(${angle}deg)`;
+    this.rotate(this.state.selectedMonthID);
     this.props.setHoverFalse();
   }
 
@@ -81,17 +76,14 @@ class SunDiagram extends Component {
   render() {
     return (
       <div className="diagram" id="sun-diagram">
-        <MoonRotable 
+        <Rotable
           id={"sun-rotable"}
           moonStroke={"#b9dbff"}
           moonFill={"#81beff"}
           planetStroke={"#fea"}
           planetFill={"#ffe680"}
         />
-
         <SunAnnotations />
-
-        {/* AREAS */}
         <svg width="200mm" height="200mm" version="1.1" viewBox="0 0 200 200">
           <g
             className="areas areas-sun"

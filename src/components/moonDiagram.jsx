@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MoonAnnotations from "./moon/moon-annotations";
 import MoonAreas from "./moon/moon-areas";
-import MoonRotable from "./moon/moon-rotable";
+import Rotable from "./rotable";
 
 const dayDico = {
   0: ["1", "st"],
@@ -45,27 +45,22 @@ class MoonDiagram extends Component {
     };
   }
 
-  handleHover(area) {
-    this.props.setHoverTrue();
-    const angle = Number.parseInt(
-      (Number.parseFloat(area.id, 10) * 360) / 31,
-      10
-    );
+  rotate(x) {
+    const angle = Number.parseInt((Number.parseFloat(x, 10) * 360) / 31, 10);
     document.getElementById(
       "moon-rotable"
     ).style.transform = `rotate(${angle}deg)`;
+  }
+
+  handleHover(area) {
+    this.props.setHoverTrue();
+    this.rotate(area.id);
     const [day, suffix] = dayDico[area.id];
     this.props.dayHoverFnct(day, suffix);
   }
 
   handleMouseOut() {
-    const angle = Number.parseInt(
-      (Number.parseFloat(this.state.selectedDayID, 10) * 360) / 31,
-      10
-    );
-    document.getElementById(
-      "moon-rotable"
-    ).style.transform = `rotate(${angle}deg)`;
+    this.rotate(this.state.selectedDayID);
     this.props.setHoverFalse();
   }
 
@@ -87,8 +82,6 @@ class MoonDiagram extends Component {
     diagram.style.height = `${Number.parseInt(calendarWidth * 0.4)}px`;
   }
 
-
-
   componentDidMount() {
     document.querySelectorAll(".areas-moon path").forEach((area) => {
       area.addEventListener("mouseover", (e) => this.handleHover(area));
@@ -103,7 +96,7 @@ class MoonDiagram extends Component {
   render() {
     return (
       <div className="diagram" id="moon-diagram">
-        <MoonRotable
+        <Rotable
           id={"moon-rotable"}
           moonStroke={"#eee"}
           moonFill={"#ddd"}

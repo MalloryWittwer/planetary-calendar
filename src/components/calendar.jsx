@@ -5,11 +5,10 @@ class Calendar extends Component {
     const { agenda, month, day } = this.props;
     const m = ["", "", "", "", ""];
     if (agenda) {
-      const date = agenda.filter(
-        (x) => x.month === month && x.day === Number.parseInt(day, 10)
-      );
       let k = 0;
-      date.forEach((item) => {
+      agenda.filter(
+        (x) => x.month === month && x.day === Number.parseInt(day, 10)
+      ).forEach((item) => {
         m[k] = item;
         k++;
       });
