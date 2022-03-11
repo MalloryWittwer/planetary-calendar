@@ -104,6 +104,16 @@ svg {
   color: var(--gray);
   padding: 10px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.right-block li {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--gray);
+  height: 20%;
 }
 
 .month {

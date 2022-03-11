@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 
 class Calendar extends Component {
-  getMessage = () => {
+  getMessages = () => {
     const { agenda, month, day } = this.props;
+    const m = ["", "", "", "", ""];
     if (agenda) {
       const date = agenda.filter(
         (x) => x.month === month && x.day === Number.parseInt(day, 10)
       );
-      if (date) {
-        return date;
-      } else {
-        return [];
-      }
-    } else {
-      return [];
+      let k = 0;
+      date.forEach((item) => {
+        m[k] = item;
+        k++;
+      });
     }
+    return m;
   };
 
   render() {
@@ -29,7 +29,7 @@ class Calendar extends Component {
             </p>
           </div>
           <ul className="right-block">
-            {this.getMessage().map((item) => {
+            {this.getMessages().map((item) => {
               return <li key={item.key}>{item.message}</li>;
             })}
           </ul>
